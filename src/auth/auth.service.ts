@@ -72,4 +72,8 @@ export class AuthService {
       token: this.getJwtToken({ id: user.id }),
     };
   }
+
+  async findAll() {
+    return await this.userRepository.find();
+  }
 }
