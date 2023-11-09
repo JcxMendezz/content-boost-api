@@ -30,7 +30,7 @@ export class AuthService {
       delete user.password;
 
       return {
-        ...user,
+        user,
         token: this.getJwtToken({ id: user.id }),
       };
     } catch (err) {
