@@ -19,6 +19,7 @@ import { ChatgptModule } from './chatgpt/chatgpt.module';
       password: process.env.POSTGRES_PASSWORD,
       autoLoadEntities: true,
       synchronize: true,
+      ssl: true,
     }),
 
     ChatgptModule,
