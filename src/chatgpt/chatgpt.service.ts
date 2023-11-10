@@ -16,8 +16,10 @@ export class ChatgptService {
       const queryObj: CreateChatCompletionRequest = {
         model: 'gpt-3.5-turbo',
         messages: [{ role: 'user', content: prompt }],
-        max_tokens: 300,
-        temperature: 1,
+        max_tokens: 2048,
+        temperature: 0.2,
+        n: 1,
+        stop: null,
       };
 
       const completion = await this.openai.createChatCompletion(queryObj);
