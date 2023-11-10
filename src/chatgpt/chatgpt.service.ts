@@ -23,6 +23,9 @@ export class ChatgptService {
       };
 
       const completion = await this.openai.createChatCompletion(queryObj);
+
+      console.log({ completion });
+
       const message = completion.data.choices[0].message;
       const usage = completion.data.usage;
 
